@@ -3,7 +3,6 @@ const { expect } = chai
 
 import { getCurrentTimeAndWeatherByLocationOrGetByPostalCode } from '../index'
 
-
 describe('Get current time and weather for a location', () => {
     it('should return an error response if input parameter are empty', async () => {
         const response = await getCurrentTimeAndWeatherByLocationOrPostalCode()
@@ -21,7 +20,7 @@ describe('Get current time and weather for a location', () => {
         expect(response).to.have.property('status').to.equal(400)
     })
 
-    it('should return error if input param is an empty array', async () => {
+    it('should return an error if input param is an empty array', async () => {
         const response = await getCurrentTimeAndWeatherByLocationOrPostalCode([])
         expect(response).to.exist
         expect(response).to.be.an('object')
@@ -61,4 +60,4 @@ describe('Get current time and weather for a location', () => {
         expect(response.data).to.have.property('currentTime')
         expect(response.data).to.have.property('message').to.equal('success')
     })
-}) 
+})
