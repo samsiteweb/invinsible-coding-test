@@ -1,25 +1,25 @@
-// import { currentTimeByLocationName, weatherByLocationName } from "../services"
+import { currentTimeByLocationName, weatherByLocationName } from "../services"
 
-const getWeatherByNameOfLocation = async location => {
+const getWeatherByLocationName = async (location = place) => {
     try {
         const weather = await weatherByLocationName(location)
-
+        console.log(weather, "weather")
     } catch (error) {
-
+        console.log(error)
     }
 
 }
 
 
-const getCurrentTimeByNameOfLocation = async location => {
+const getCurrentTimeByLocationName = async (location = place) => {
     try {
         const currentTime = await currentTimeByLocationName(location)
     } catch (error) {
-
+        console.log(error)
     }
 }
 
 
 export {
-    getWeatherByNameOfLocation
+    getWeatherByLocationName, getCurrentTimeByLocationName
 }

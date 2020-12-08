@@ -1,9 +1,10 @@
-import { config } from 'dotenv';
-
+import { config } from 'dotenv'
 config()
+console.log(process.env.OPEN_WEATHER_API_KEY, 'API KEY')
 
-const API_KEY_OPEN_WEATHER = process.env.API_KEY_OPEN_WEATHER
 
+
+const OPEN_WEATHER_API_KEY = process.env.OPEN_WEATHER_API_KEY
 export {
-    API_KEY_OPEN_WEATHER
+    OPEN_WEATHER_API_KEY
 }
