@@ -6,8 +6,8 @@ const { WEATHER_FROM_LOCATION, WEATHER_FROM_POSTAL_CODE } = API
 
 const makeApiCall = url => Axios.get(url)
 
-const locationUrl = (url = WEATHER_FROM_LOCATION, location, apiKey = OPEN_WEATHER_API_KEY) => `${url}${location}&APPID=${apiKey}`
-const postalCodeUrl = (url = WEATHER_FROM_POSTAL_CODE, location, apiKey = OPEN_WEATHER_API_KEY) => `${url}${location}&APPID=${apiKey}`
+const locationUrl = (location, apiKey = OPEN_WEATHER_API_KEY) => `${WEATHER_FROM_LOCATION}${location}&APPID=${apiKey}`
+const postalCodeUrl = (postalCode, apiKey = OPEN_WEATHER_API_KEY) => `${WEATHER_FROM_POSTAL_CODE}${postalCode}&APPID=${apiKey}`
 
 
 
